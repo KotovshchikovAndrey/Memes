@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "filemicroservice"
+version = "0.1.0"
+description = ""
+authors = ["Andrey <ykt_andrey@mail.ru>"]
+packages = [{ include = "src", from = "." }]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+
+aiokafka = "^0.11.0"
+pydantic-settings = "^2.3.4"
+aioboto3 = "^13.1.1"
+httpx = "^0.27.0"
+fastapi = "^0.111.1"
+black = "^24.4.2"
+isort = "^5.13.2"
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+server = "src.index:run_uvicorn_server"

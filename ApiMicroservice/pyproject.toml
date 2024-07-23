@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "apimicroservice"
+version = "0.1.0"
+description = ""
+authors = ["Andrey <ykt_andrey@mail.ru>"]
+packages = [{ include = "src", from = "." }]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+
+fastapi = "^0.111.1"
+pydantic-settings = "^2.3.4"
+sqlalchemy = "^2.0.31"
+python-multipart = "^0.0.9"
+asyncpg = "^0.29.0"
+aiofiles = "^24.1.0"
+aiokafka = "^0.11.0"
+black = "^24.4.2"
+isort = "^5.13.2"
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+server = "src.index:run_uvicorn_server"
